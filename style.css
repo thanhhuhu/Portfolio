@@ -1,0 +1,67 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.buttonNavbar {
+    display: flex;
+    gap: 10px;
+}
+#icon
+{
+    width: 150px;
+    height: 75px;
+}
+#buttonLogin
+{
+    width: 100px;
+    height: 50px;
+    border-radius: 100px;
+    border: none;
+    background-color: white;
+    text-decoration: yellow;
+    font-family: "Berlin Sans FB", serif;
+    font-size: large;
+    cursor: pointer;
+}
+#buttonHello
+{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border-color: blue;
+    background-color: yellow;
+    font-family: "Berlin Sans FB", serif;
+    font-size: large;
+    cursor: pointer;
+}
+#buttonLogin:hover {
+    color: blue;
+}
+#buttonHello:hover {
+    background-color: blue;
+    color: white;
+}
+.headerLine
+{
+    text-align: center;
+    font-family:Courier, monospace;
+}
+#avatar
+{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#comment
+{
+    width: 100%;
+    text-align: center;
+    font-family: Courier, monospace;
+    background-color: deepskyblue;
+    color: black;
+
+}
