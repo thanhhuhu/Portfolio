@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Column Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      background-color: #f7f7f7;
+      padding: 20px;
+    }
+    .container {
+      display: flex;
+      gap: 20px;
+      max-width: 1200px;
+      width: 100%;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      flex: 1;
+    }
+    .card-icon {
+      background-color: #64d2a1;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+      color: #fff;
+      font-size: 24px;
+    }
+    .card-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .card-description {
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .card-section {
+      margin-bottom: 15px;
+    }
+    .card-section h4 {
+      color: #6a0dad;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .card-section p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <div class="card-icon">📐</div>
+    <div class="card-title">Designer</div>
+    <div class="card-description">
+      I value simple content structure, clean design patterns, and thoughtful interactions.
+    </div>
+    <div class="card-section">
+      <h4>Things I enjoy designing:</h4>
+      <p>UX, UI, Web, Apps, Logos</p>
+    </div>
+    <div class="card-section">
+      <h4>Design Tools:</h4>
+      <p>Affinity Designer, Figma, Pen & Paper, Sketch</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">💻</div>
+    <div class="card-title">Frontend Developer</div>
+    <div class="card-description">
+      I like to code things from scratch, and enjoy bringing ideas to life in the browser.
+    </div>
+    <div class="card-section">
+      <h4>Languages I speak:</h4>
+      <p>HTML, Pug, Slim, CSS, Sass, Git</p>
+    </div>
+    <div class="card-section">
+      <h4>Dev Tools:</h4>
+      <p>Astro JS, Bitbucket, Bootstrap, Bulma, Codekit, GitHub, Netlify, Tailwind CSS, VS Code</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">📚</div>
+    <div class="card-title">Mentor</div>
+    <div class="card-description">
+      I genuinely care about people, and enjoy helping them work on their craft.
+    </div>
+    <div class="card-section">
+      <h4>Experiences I draw from:</h4>
+      <p>UX/UI, Product design, Freelancing</p>
+    </div>
+    <div class="card-section">
+      <h4>Mentor Stats:</h4>
+      <p>9+ years experience, 30+ short courses, 65+ bootcamps, 250+ students, 2,500+ mentor sessions, 60+ group critiques, 18,000+ bits of feedback</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

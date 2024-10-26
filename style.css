@@ -63,5 +63,14 @@
     font-family: Courier, monospace;
     background-color: deepskyblue;
     color: black;
-
+}
+table
+{
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+tr td th
+{
+    border: 1px solid black;
 }
