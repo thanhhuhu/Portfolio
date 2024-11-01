@@ -25,6 +25,7 @@
     font-family: "Berlin Sans FB", serif;
     font-size: large;
     cursor: pointer;
+    margin-right: 10px;
 }
 #buttonHello
 {
@@ -36,12 +37,13 @@
     font-family: "Berlin Sans FB", serif;
     font-size: large;
     cursor: pointer;
+    margin-right: 10px;
 }
 #buttonLogin:hover {
     color: blue;
 }
 #buttonHello:hover {
-    background-color: blue;
+    background-color: deepskyblue;
     color: white;
 }
 .link-icon

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Messages for me</title>
+    <link rel="stylesheet" href="styleMessage.css">
+</head>
+<body>
+<div>
+    <div class="header">
+        <a href=""><img src="Image/icon.avif" alt="" id="icon"></a>
+        <div class="buttonHeader">
+            <img src="Image/home.png" alt="" onclick="goHome()" id="button-home">
+            <img src="Image/cross.png" alt="" onclick="clearText()" id="button-clear">
+            <img src="Image/undo.png" alt="" onclick="resetPage()" id="button-reset">
+        </div>
+    </div>
+    <div class="title">
+        <h1>Thanks for taking the time to reach out.<br>
+            How can I help you today?
+        </h1>
+    </div>
+    <div class="submit-text">
+        <div class="input-row">
+            <div class="input-group">
+                <h3>Name</h3>
+                <label for="name-input"><input type="text" id="name-input" oninput="validateName()"></label>
+            </div>
+            <div class="input-group">
+                <h3>Email</h3>
+                <label for="email-input"><input type="text" id="email-input" oninput="validateEmail()"></label>
+            </div>
+        </div>
+        <h3>Message</h3>
+        <label for="message-input"><textarea placeholder="No more than 100 symbols" id="message-input" oninput="validateMessage()"></textarea></label>
+        <div>
+            <p id="error-name" style="color: red;"></p>
+            <p id="error-email" style="color: red;"></p>
+            <p id="error-message" style="color: red;"></p>
+        </div>
+        <br>
+        <button onclick="submitForm()" id="button-submit">Submit</button>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    function clearText() {
+        document.getElementById('name-input').value = "";
+        document.getElementById('email-input').value = "";
+        document.getElementById('message-input').value = "";
+
+        document.getElementById('error-name').innerText = "";
+        document.getElementById('error-email').innerText = "";
+        document.getElementById('error-message').innerText = "";
+    }
+
+    function resetPage() {
+        location.reload();
+    }
+
+    function goHome() {
+        location.href = "index.html";
+    }
+
+    function validateMessage() {
+        const messageInput = document.getElementById('message-input');
+        const errorMessage = document.getElementById('error-message');
+        const maxLength = 100;
+
+        if (messageInput.value.length > maxLength) {
+            errorMessage.innerText = 'Error! No more than 100 symbols!';
+            errorMessage.style.display = 'block';
+            messageInput.value = messageInput.value.slice(0, maxLength);
+        } else if (messageInput.value.trim() === "") {
+            errorMessage.innerText = 'Error! Please fill in the message!';
+            errorMessage.style.display = 'block';
+        } else {
+            errorMessage.innerText = '';
+            errorMessage.style.display = 'none';
+        }
+    }
+
+    function validateName() {
+        const nameInput = document.getElementById('name-input');
+        const errorName = document.getElementById('error-name');
+        const minLengthName = 2;
+
+        if (nameInput.value.length < minLengthName) {
+            errorName.innerText = 'Name is required and should be at least 2 characters.';
+            errorName.style.display = 'block';
+        } else {
+            errorName.innerText = '';
+            errorName.style.display = 'none';
+        }
+    }
+
+    function validateEmail() {
+        const emailInput = document.getElementById('email-input');
+        const errorEmail = document.getElementById('error-email');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(emailInput.value)) {
+            errorEmail.innerText = 'Please enter a valid email';
+            errorEmail.style.display = 'block';
+        } else {
+            errorEmail.innerText = '';
+            errorEmail.style.display = 'none';
+        }
+    }
+
+    function submitForm() {
+        validateName();
+        validateEmail();
+        validateMessage();
+
+        const errorName = document.getElementById('error-name').style.display;
+        const errorEmail = document.getElementById('error-email').style.display;
+        const errorMessage = document.getElementById('error-message').style.display;
+
+        if (errorName === 'none' && errorEmail === 'none' && errorMessage === 'none') {
+            alert('Form submitted successfully!Thanks very much');
+            clearText();
+        } else {
+            alert('Please fill in the form before submit');
+        }
+    }
+</script>
