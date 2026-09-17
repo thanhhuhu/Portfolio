@@ -35,7 +35,7 @@ const Introduction = () => {
                         <i>
                             <b className='text-pink-100'>
                                 {t("introSection.heading4")}
-                            </b>
+                            </b>`
                         </i>
                         <br />
                         <br />

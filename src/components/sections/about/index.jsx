@@ -18,11 +18,11 @@ const About = () => {
                     <h3 className="text-center mb-md-5 mb-2">Know Who <span className="brand-red">I'M</span> </h3>
                     <div>
                         <div>
-                            <p> Hi Everyone, I am HoiDanIT from Hanoi, VietNam.</p>
+                            <p> Hi Everyone, I am Thanh from DaNang, VietNam.</p>
 
                             <p> I am currently employed as a a freelance dev (start-up).</p>
 
-                            <p> I have completed Bachelor's degree in Software Engineer at Hanoi University of Science and Technology (HUST).</p>
+                            <p> I have completed Bachelor's degree in Software Engineer atAdmiral Makarov State University of Maritime and Inland Shipping ( GUMRF - Russia ).</p>
                         </div>
                     </div>
                     <div>
@@ -36,8 +36,8 @@ const About = () => {
                         </ul>
                     </div>
                     <div>
-                        <p className="text-center brand-red">"Pursuing Your Dreams Is How You Become Homeless ~.~"</p>
-                        <p className="text-center brand-red">--Jimmy O Yang</p>
+                        <p className="text-center brand-red">"To live without hope is to cease to live ~.~"</p>
+                        <p className="text-center brand-red">--Fyodor Dostoevsky ( Фёдор Достоевский )</p>
                     </div>
                 </Col >
                 <Col md={6} xs={12} className="d-flex align-items-center justify-content-center">
@@ -66,15 +66,15 @@ const About = () => {
                                 <div className="p-3 relative">
                                     <div className="experience-container">
                                         <div className="duration-text">
-                                            <p>20xx-20xx</p>
+                                            <p>2021-2026</p>
                                         </div>
                                         <div className="details">
                                             <div className="icon">
                                                 <FaGraduationCap size={36} />
                                             </div>
                                             <div className="info">
-                                                <p className="title">Softwaren Engineer</p>
-                                                <p className="company">Hanoi University of Science and Technology (HUST)</p>
+                                                <p className="title">Software Engineer</p>
+                                                <p className="company">Admiral Makarov State University of Maritime and Inland Shipping</p>
                                             </div>
                                         </div>
                                     </div>
@@ -91,6 +91,7 @@ const About = () => {
                     <h3 className="mb-md-5 mb-2">FIND ME ON </h3>
                     <SocialMedia
                         youtube={APP_DATA.YOUTUBE_URL}
+                        github={APP_DATA.GITHUB_URL}
                         facebook={APP_DATA.FACEBOOK_URL}
                         tiktok={APP_DATA.TIKTOK_URL}
                         udemy={APP_DATA.UDEMY_URL}
